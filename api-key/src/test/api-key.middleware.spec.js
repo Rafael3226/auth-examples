@@ -24,7 +24,7 @@ describe("API Endpoints", () => {
     const response = await request(server).get("/api/resource");
     expect(response.status).toBe(401);
     expect(response.body).toEqual({
-      message: API_KEY_MIDDLEWARE.MISSING_API_KEY,
+      error: API_KEY_MIDDLEWARE.MISSING_API_KEY,
     });
   });
 
@@ -34,7 +34,7 @@ describe("API Endpoints", () => {
       .set("authorization", "INVALID_API_KEY");
     expect(response.status).toBe(403);
     expect(response.body).toEqual({
-      message: API_KEY_MIDDLEWARE.INVALID_API_KEY,
+      error: API_KEY_MIDDLEWARE.INVALID_API_KEY,
     });
   });
 
