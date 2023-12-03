@@ -44,7 +44,7 @@ describe("Basic Auth", () => {
   it("should return 200 for a valid API key", async () => {
     const response = await request(server)
       .get("/api/data")
-      .set(AUTHORIZATION_HEADER, "dXNlcjpwYXNzd29yZA==");
+      .set(AUTHORIZATION_HEADER, AUTHORIZATION_BASE_64);
     expect(response.status).toBe(200);
     expect(response.body).toEqual({
       message: API_DATA_ROUTE.SUCCESS_MESSAGES,
