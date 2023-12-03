@@ -39,5 +39,5 @@ The server will be running on [http://localhost:3000](http://localhost:3000).
 ## API Endpoints
 
 - **GET /api/data**
-  - Requires a valid API key in the `authorization` header.
-  - Example valid API key: 'YOUR_API_KEY'
+  - Requires a valid Authorization in the `authorization` header.
+  - Example valid Authorization: 'dXNlcjpwYXNzd29yZA=='
